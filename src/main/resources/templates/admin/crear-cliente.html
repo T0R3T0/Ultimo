@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cliente🥳🥳</title>
+</head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" >
+<body>
+   <div class="admin-container">
+    <h2><i class="fas fa-user-plus"></i></h2>Crear Cliente
+
+    <form action="@{/admin/crear-cliente}" method="post"th:object="${Cliente}">
+        <div class="form-group">
+            <Label><i class="fas fa-signature"></i>Nombre </Label>
+            <input type="text" th:field="*{nombre}" requiered>
+        </div>
+        <div class="form-group">
+            <Label><i class="fas fa-id-card"></i> Identificación </Label>
+            <input type="text" th:field="*{identificacion}" requiered>
+        </div>
+        <div class="form-group">
+            <Label><i class="fas fa-key"></i>PIN: </Label>
+            <input type="password" th:field="*{pin}" requiered>
+        </div>
+        <button type="submit" class="admin-btn">
+            <i class="fas fa-user-check"></i> Crear Cliente
+        </button>
+    </form>
+        <div  th:if="${mensaje}" th:text="${mensaje}"
+        th:class="${error} ? 'message error: 'message success"></div>
+
+        <a th:href="@{/admin}" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Volver
+    </div>
+</body>
+</html>     
