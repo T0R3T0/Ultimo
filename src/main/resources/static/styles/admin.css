@@ -1,32 +1,47 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f1f1f1;
-  color: #333;
-  padding: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: #000; 
+    color: #fff; 
+    font-family: system-ui, sans-serif;
 }
 
 .admin-container {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #fff;
 }
 
 .admin-menu {
-  list-style: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 .admin-menu li {
-  margin: 15px 0;
+    margin: 1rem 0;
+    background-color: #111;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.admin-menu li:hover {
+    background-color: #222;
 }
 
 .admin-menu a {
-  text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.admin-menu a:hover {
-  color: #0056b3;
+.admin-menu i {
+    color: #0ff;
 }
